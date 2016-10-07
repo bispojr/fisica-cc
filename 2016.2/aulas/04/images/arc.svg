@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.30426741"
-     inkscape:cx="462.08137"
-     inkscape:cy="150.66655"
+     inkscape:zoom="0.56148316"
+     inkscape:cx="491.34411"
+     inkscape:cy="366.45397"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -122,7 +122,7 @@
          id="tspan3357-7-7"
          x="828.41895"
          y="638.41443"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">Ângulo Final</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">Ângulo Inicial</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none"
        id="rect3353-7-5-4"
@@ -133,15 +133,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30.99826431px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="81.850044"
+       x="95.850044"
        y="639.50348"
        id="text3355-1-7-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3357-7-7-0"
-         x="81.850044"
+         x="95.850044"
          y="639.50348"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">Ângulo Inicial</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tahoma;-inkscape-font-specification:Tahoma">Ângulo Final</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30.99826431px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
