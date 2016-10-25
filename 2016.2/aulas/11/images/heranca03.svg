@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="heranca03.svg"
+   inkscape:export-filename="C:\Users\Esdras\Documents\disciplinas\fisica-cc\2016.2\aulas\04\images\heranca03.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.56611446"
+     inkscape:cx="-96.097365"
+     inkscape:cy="340"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3336"
+       width="376.24899"
+       height="158.97845"
+       x="333.85477"
+       y="464.14197" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:60.90136719px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="383.04001"
+       y="564.81055"
+       id="text3338"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3340"
+         x="383.04001"
+         y="564.81055">Partícula</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="524.62891"
+       y="497.70404"
+       id="text3342"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3344"
+         x="524.62891"
+         y="497.70404" /></text>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3336-1"
+       width="376.24899"
+       height="158.97845"
+       x="112.16814"
+       y="714.97455" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:60.90136719px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="184.31694"
+       y="815.64319"
+       id="text3338-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3340-3"
+         x="184.31694"
+         y="815.64319">Elétron</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3336-4"
+       width="376.24899"
+       height="158.97845"
+       x="578.50494"
+       y="714.97455" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:60.90136719px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="670.08441"
+       y="819.17603"
+       id="text3338-19"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3340-1"
+         x="670.08441"
+         y="819.17603">Próton</tspan></text>
+    <path
+       style="fill:#ff0000;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 318.64938,721.10452 35.20436,-57.96401 -24.74073,-15.02625 61.65832,-18.67422 11.85701,63.32365 -23.32698,-14.16761 -35.63368,58.67089 z"
+       id="path3377"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:#ff0000;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 692.03474,722.69635 -35.2044,-57.96401 24.7408,-15.02625 -61.6584,-18.67422 -11.857,63.32365 23.327,-14.16761 35.6337,58.67089 z"
+       id="path3377-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+    <ellipse
+       style="fill:#000080;fill-opacity:1;stroke:none"
+       id="path3372"
+       cx="512.26392"
+       cy="432.34628"
+       rx="197.83984"
+       ry="65.357811" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:51.25854111px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="368.55106"
+       y="445.91879"
+       id="text3364"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3366"
+         x="368.55106"
+         y="445.91879">Objeto-Pai</tspan></text>
+    <ellipse
+       style="fill:#000080;fill-opacity:1;stroke:none"
+       id="path3372-1"
+       cx="302.05905"
+       cy="907.51514"
+       rx="208.4384"
+       ry="65.357811" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:51.25854111px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="147.74767"
+       y="921.08765"
+       id="text3364-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3366-0"
+         x="147.74767"
+         y="921.08765">Objeto-Filho</tspan></text>
+    <ellipse
+       style="fill:#000080;fill-opacity:1;stroke:none"
+       id="path3372-1-9"
+       cx="766.62946"
+       cy="909.28156"
+       rx="208.4384"
+       ry="65.357811" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:51.25854111px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="612.31805"
+       y="922.85406"
+       id="text3364-3-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3366-0-6"
+         x="612.31805"
+         y="922.85406">Objeto-Filho</tspan></text>
+  </g>
+</svg>
