@@ -111,6 +111,18 @@
 	\end{frame}
 
 %------------------------------------------
+	\begin{frame}{Bônus (0,5 pt)}
+		\begin{block}{Desafio}
+			{\bf (Halliday 3.23)} O oásis B está 25 m a leste do oásis A. Partindo do oásis A, um camelo percorre 24 m em uma direção $15^{\circ}$ ao sul do leste e 8,0 m para o norte. A que distância o camelo está do oásis B?
+		\end{block} 
+		\begin{block}{Informações úteis}
+			\begin{itemize}
+				\item Candidaturas (25 de outubro, 17h20);
+				\item Resposta escrita e apresentação (27 de outubro, 19h00).
+			\end{itemize}
+		\end{block} 
+	\end{frame}
+	
 	\section{Revisão}
 		
 \begin{frame}[fragile]{Funções e Métodos}
@@ -324,204 +336,6 @@ x = x + 1;
 			\item {\tt Array}: um objeto consistindo de uma lista de dados de algum tipo. \pause 
 			\item {\tt Function}: um objeto passível de ser chamado, que executa um bloco de código. 
 		\end{itemize}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Números}
-		\begin{itemize}
-			\item Existe um único tipo de dado numérico em JavaScript: {\tt Number}; \pause
-			\item Não há diferença entre números inteiros e pontos-flutuantes, por exemplo; \pause 
-			\item O maior valor que {\tt Number} pode armazenar é $1,8 \times 10^{308}$; \pause
-			\item O número de átomos do universo visível é estimado em $10^{80}$; \pause
-			\item Permite armazenar números bem pequenos como $5 \times 10^{-324}$.
-		\end{itemize}	
-	\end{block} \pause
-	\begin{block}{Valores especiais em {\tt Number}}
-		\begin{itemize}
-			\item {\tt NaN} (Not a Number): e.g. raiz de -1, ou 0/0; \pause
-			\item {\tt Infinity} e {\tt -Infinity}: divisão de um valor não-zero por zero (e.g. 5/0 ou (-3)/0).
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Strings}
-		Uma {\bf string} é uma sequência de caracteres. Normalmente, vem delimitada por aspas (simples ou dupla).
-	\end{block} \pause
-	\begin{block}{Exemplo}
-		\begin{lstlisting}[language=JavaScript]
-var str = "Olah jovens";
-console.log(str);
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Booleanos}
-		Um {\bf booleano} pode ter apenas dois valores: {\tt true} ou {\tt false}.
-	\end{block} \pause
-	\begin{block}{Exemplo}
-		\begin{lstlisting}[language=JavaScript]
-var bln = false;	// valor booleano false
-bln = "true";		// string "true"... cuidado!
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{\tt Undefined}
-		\begin{itemize}
-			\item O tipo de dados {\tt Undefined} tem um único valor: {\tt undefined}. \pause
-			\item Casos que uma variável assume {\tt undefined}: \pause
-				\begin{itemize}
-					\item Propriedade inexistente; \pause
-					\item Variável declarada, mas não inicializada; \pause
-					\item Função sem {\tt return}; \pause
-					\item Argumento não fornecido de uma função.
-				\end{itemize}
-		\end{itemize}
-	\end{block} 
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{\tt Null}
-		\begin{itemize}
-			\item O tipo de dados {\tt Null} tem um único valor: {\tt null}. \pause
-			\item Diferença crucial entre {\tt null} e {\tt undefined}: {\tt null} é associado a variável de forma proposital.
-		\end{itemize}	
-	\end{block} \pause
-	\begin{block}{Exemplo}
-		\begin{lstlisting}[language=JavaScript]
-var noVal = null;
-console.log(typeof noVal);	// retorna "Object"
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Vetores}
-		Um vetor é uma coleção de objetos.	
-	\end{block} \pause
-	\begin{block}{Exemplo 1}
-		\begin{lstlisting}[language=JavaScript]
-var arr = new Array();
-arr = [2, 4, 6];
-console.log(arr[1]); // imprime 4
-arr[3] = 8;	// 8 - quarto elemento do vetor
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Exemplo 2}
-		\begin{lstlisting}[language=JavaScript]
-var xArr = new Array();
-var yArr = new Array();
-xArr = [1,2];
-yArr = [3,4];
-var zArr = new Array(xArr,yArr);
-console.log( zArr[0][1] ); // retorna 2
-console.log( zArr[1][0] ); // retorna 3
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Operadores (Exemplo 1)}
-		\begin{lstlisting}[language=JavaScript]
-var x = 5;
-var y = 3;
-x%y; // retorna 2
-var z;
-z = x++; // atribui o valor de x a z, e depois incrementa x
-console.log(z); // retorna 5
-z = ++x; // incrementa o valor de x, e depois atribui-o a z
-console.log(z); //retorna 7
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Operadores (Exemplo 2)}
-		\begin{lstlisting}[language=JavaScript]
-var a = 1;
-a = a + 1;
-console.log(a); // retorna 2
-a += 1; // forma reduzida de a = a + 1
-console.log(a); // retorna 3
-a = 4*a;
-console.log(a); // retorna 12
-a *= 4; // forma reduzida de a = a*4
-console.log(a); // retorna 48
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Alguns métodos matemáticos...}
-		\begin{itemize}
-			\item {\tt Math.abs(a)}: valor absoluto de {\tt a}; \pause
-			\item {\tt Math.pow(a,b)}: {\tt a} elevado à potência de {\tt b}; \pause
-			\item {\tt Math.sqrt(a)}: raiz quadrada de {\tt a}; \pause
-			\item {\tt Math.ceil(a)}: o menor inteiro que é maior que {\tt a}; \pause
-			\item {\tt Math.floor(a)}: o maior inteiro que é menor que {\tt a}; \pause
-			\item {\tt Math.round(a)}: o inteiro mais próximo de {\tt a}; \pause 
-			\item {\tt Math.max(a,b,c,...)}: o maior entre {\tt a, b, c, ...}; \pause
-			\item {\tt Math.min(a,b,c,...)}: o menor entre {\tt a, b, c, ...}; \pause
-			\item {\tt Math.random()}: um número pseudo-aleatório {\tt n}, em que $0 \leq n < 1$.
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Exemplo com {\tt Math.random()}}
-		\begin{lstlisting}[language=JavaScript]
-vx = Math.random()*5;	// 0 <= n < 5
-vy = (Math.random()-0.5)*4;	// -2 <= n < 2
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Outros exemplos...}
-		\begin{lstlisting}[language=JavaScript]
-if (a == 0){
-	// faca algo se a=0
-} else if (a < 0 ) {
-	// faca algo caso a seja negativo
-} else if (a > 0) {
-	// faca algo caso a seja positivo
-} else {
-	// faca algo caso o valor de a seja um NaN
-}
-\end{lstlisting}	
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Outros exemplos...}
-	\begin{lstlisting}[language=JavaScript]
-var sum = 0;
-for (var i = 1; i <= 100; i++) {
-	sum += i;
-}
-console.log(sum);
-\end{lstlisting}	
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Conceitos Básicos em JavaScript}
-	\begin{block}{Outros exemplos...}
-		\begin{lstlisting}[language=JavaScript]
-var sum = 0;
-var i = 1;
-while (i <= 100) {
-	sum += i;
-	i++;
-}
-console.log(sum);
-\end{lstlisting}	
 	\end{block}
 \end{frame}
 	
