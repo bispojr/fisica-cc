@@ -81,14 +81,14 @@
   \usetheme{Warsaw}
 }
 
-\title{Movimento Retilíneo} 
+\title{Movimento Retilíneo (Parte 2)} 
 
 \author{
   Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
   } 
  \institute{
   Física para Ciência da Computação \\Bacharelado em Ciência da Computação}
-\date{\textbf{20 de outubro de 2016} }
+\date{\textbf{08 de novembro de 2016} }
 
 \logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
 
@@ -140,179 +140,20 @@
 	
 %------------------------------------------
 	\section{Revisão}
-	
-\subsection{Medição}
-	\begin{frame}{Medindo grandezas}
-		\begin{block}{Descobrindo a física...}
-			Medindo e comparando grandezas
-		\end{block}
-		\begin{block}{Grandezas}
-			\begin{itemize}
-				\item Comprimento, 
-				\item Tempo, 
-				\item Massa, 
-				\item Temperatura, 
-				\item Pressão, 
-				\item Corrente elétrica...
-			\end{itemize}
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Medindo grandezas}
-		\begin{block}{Como medimos uma grandeza}
-			Comparando-a com um padrão
-		\end{block}
-		\begin{block}{Unidade}
-			Medida de uma grandeza
-		\end{block}
-		\begin{block}{Exemplo}
-			Metro é uma unidade de grandeza de comprimento
-		\end{block}	
-	\end{frame}
-	
-	\begin{frame}{Medindo grandezas}
-		\begin{block}{Sistema Internacional de Unidades (SI)}
-			\begin{itemize}
-				\item 1971
-				\item 14ª Conferência Geral de Pesos e Medidas
-				\item Sete grandezas como fundamentais
-			\end{itemize}
-		\end{block}
-		\begin{center}
-			\includegraphics[scale=0.5]{images/tabela1-1.png}
-		\end{center}
-	\end{frame}
-	
-	\begin{frame}{Medindo grandezas}
-		\begin{block}{Unidades Derivativas}
-			São aquelas unidades que podem ser obtidas a partir de unidades fundamentais.
-		\end{block}
-		\begin{block}{Exemplo}
-			1 watt = 1 W = 1 kg $\times m^2 / s^3$
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Notação Científica}
-		\begin{block}{Onde é utilizada?}
-			Usa-se a notação científica para expressar as grandezas muito grandes.
-		\end{block}
-		\begin{block}{Formato}
-			\begin{center}
-				$a \times 10^b$
-			\end{center}
-			em que
-			\begin{itemize}
-				\item $a \in \mathbb{R}$ e $1 \leq a < 10$; e
-				\item $b \in \mathbb{Z}^*$.
-			\end{itemize}
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Notação Científica}
-		\begin{block}{Exemplos}
-			\begin{itemize}
-				\item 3.560.000.000 m = $3,56 \times 10^9$ m
-				\item 0,000 000 492 s = $4,92 \times 10^{-7}$ s
-			\end{itemize}
-		\end{block}
-		\begin{block}{Em linguagens de programação...}
-			A notação abreviada normalmente é usada: \pause
-			\begin{center}
-				$7.59 e9$ ou $4.93 e-7$
-			\end{center}
-		\end{block}
-		\begin{block}{Umas das utilidades...}
-			Bastante útil no processo de conversão de unidades.
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Uso de prefixos}
-		\begin{center}
-			\includegraphics[scale=0.5]{images/tabela1-2.png}
-		\end{center}
-	\end{frame}
-	
-	\subsection{Comprimento}
-	\begin{frame}{Medida de Comprimento}
-		\begin{block}{Comprimento}
-			No SI, a unidade para o comprimento é o metro (m).
-		\end{block}
-		\begin{block}{Metro}
-			Distância percorrida pela luz no vácuo durante um intervalo de tempo de 1/299.792.458 de segundo.
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Curiosidade}
-		\begin{center}
-			\includegraphics[scale=0.5]{images/tabela1-3.png}
-		\end{center}
-	\end{frame}
-	
-	\subsection{Tempo}
-	\begin{frame}{Medida de Tempo}
-		\begin{block}{Tempo}
-			No SI, a unidade para o tempo é o segundo (s).
-		\end{block}
-		\begin{block}{Segundo}
-			O intervalo de tempo que corresponde a 9.192.631.770 oscilações da luz (de um comprimento de onda especificado) emitida por um átomo de césio 133.
-		\end{block}
-		\begin{block}{Hora Coordenada Universal (UTC)}
-			Fornecida por um relógio atômico no Colorado, EUA.
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Curiosidade}
-		\begin{center}
-			\includegraphics[scale=0.5]{images/tabela1-4.png}
-		\end{center}
-	\end{frame}
-	
-	\subsection{Massa}
-	\begin{frame}{Medida de Massa}
-		\begin{block}{Massa}
-			No SI, a unidade para massa é o quilograma (kg).
-		\end{block}
-		\begin{block}{Quilograma}
-			Um cilindro de platina irídio com 3,9cm de altura e 3,9cm de diâmetro.
-		\end{block}
-		\begin{center}
-			\includegraphics[scale=0.3]{images/figura1-3.png}
-		\end{center}
-	\end{frame}
-	
-	\begin{frame}{Curiosidade}
-		\begin{center}
-			\includegraphics[scale=0.5]{images/tabela1-5.png}
-		\end{center}
-	\end{frame}	
-	
-	\begin{frame}{Massa Específica}
-		\begin{block}{Massa específica}
-			É a massa por unidade de volume.
-			\begin{center}
-				$\rho = \dfrac{m}{V}$
-			\end{center}
-		\end{block}
-		\begin{block}{Exemplo: Massa específica da água}
-			1 g/$\mbox{cm}^3$
-		\end{block}
-	\end{frame}
-
-	\section{Movimento Retilíneo}
 	\begin{frame}{O que é Física?}
 		\begin{block}{Um dos objetivos da Física...}
 			\begin{itemize}
 				\item Estudar características do movimento; \pause
 				\item Ex.: Rapidez com que eles se realizam.
 			\end{itemize}
-		\end{block} \pause
+		\end{block} 
 		\begin{block}{Aplicações}
 			\begin{itemize}
-				\item Engenheiros da NASCAR $\rightarrow$ desempenho de carros; \pause
-				\item Médicos $\rightarrow$ mapeamento do fluxo de sangue; \pause
+				\item Engenheiros da NASCAR $\rightarrow$ desempenho de carros;
+				\item Médicos $\rightarrow$ mapeamento do fluxo de sangue;
 				\item Motoristas $\rightarrow$ redução de velocidade.
 			\end{itemize}
-		\end{block} \pause
+		\end{block}
 		\begin{block}{Movimento Unidimensional}
 			É o estudo do movimentos de objetos em linha reta.
 		\end{block}
@@ -322,13 +163,13 @@
 		\begin{block}{Movimento Unidimensional}
 			Propriedade Gerais:
 			\begin{itemize}
-				\item Trajetória (retilínea): \pause
+				\item Trajetória (retilínea):
 					\begin{itemize}
 						\item vertical;
 						\item horizontal; ou 
 						\item inclinada.
-					\end{itemize} \pause
-				\item ``Forças'' que atuam sobre o objeto; \pause
+					\end{itemize}
+				\item ``Forças'' que atuam sobre o objeto;
 					\begin{itemize}
 						\item Velocidade;
 						\item Direção..
@@ -347,22 +188,22 @@
 			\includegraphics[scale=0.6]{images/fig2-1}
 		\end{center}
 		\begin{itemize}
-			\item Ponto de referência: origem; \pause
-			\item Sentido: positivo ou negativo; \pause
+			\item Ponto de referência: origem;
+			\item Sentido: positivo ou negativo; 
 			\item Unidade de comprimento: m (por exemplo).
 		\end{itemize}
 	\end{frame}
 
 	\begin{frame}{Posição e Deslocamento}
 		\begin{block}{Deslocamento}
-			A mudança de posição $x_1$ para a posição $x_2$ está associado a um {\bf deslocamento} $\Delta x$: \pause
+			A mudança de posição $x_1$ para a posição $x_2$ está associado a um {\bf deslocamento} $\Delta x$: 
 			\begin{center}
 				$\Delta x = x_2 - x_1$
 			\end{center}
-		\end{block} \pause
+		\end{block} 
 		\begin{block}{Símbolo $\Delta$}
 			Associado à variação de grandezas, correspondendo à diferença entre os valores final e inicial.
-		\end{block} \pause
+		\end{block} 
 		\begin{alertblock}{Cuidado!!!}
 			Distância efetivamente percorrida é diferente de deslocamento.
 		\end{alertblock}
@@ -370,12 +211,12 @@
 
 	\begin{frame}{Posição e Deslocamento}
 		\begin{block}{Deslocamento é uma grandeza vetorial}
-			\begin{itemize} \pause
-				\item Módulo; \pause
-				\item Direção; \pause
+			\begin{itemize} 
+				\item Módulo; 
+				\item Direção; 
 				\item Sentido.
 			\end{itemize}
-		\end{block} \pause
+		\end{block} 
 		\begin{exampleblock}{Exercício}
 			Considere três pares de posições iniciais e finais, respectivamente, ao longo do eixo x. A que pares correspondem deslocamentos negativos: 
 				\begin{enumerate}
@@ -405,11 +246,11 @@
 		\begin{block}{Velocidade Média}
 			\begin{center}
 				v$_{\mbox{méd}} = \dfrac{\Delta x}{\Delta t} = \dfrac{x_2 - x_1}{t_2 - t_1}$
-			\end{center} \pause
+			\end{center} 
 			\begin{itemize}
-				\item $x_1$ é a posição no instante $t_1$; \pause
-				\item $x_2$ é a posição no instante $t_2$; \pause
-				\item No SI, a unidade de v$_{\mbox{méd}}$ é $m/s$; \pause
+				\item $x_1$ é a posição no instante $t_1$;
+				\item $x_2$ é a posição no instante $t_2$; 
+				\item No SI, a unidade de v$_{\mbox{méd}}$ é $m/s$; 
 				\item v$_{\mbox{méd}}$ também é uma grandeza vetorial.
 			\end{itemize}
 		\end{block}
@@ -425,7 +266,7 @@
 		\begin{block}{Velocidade Escalar Média}
 			\begin{center}
 				s$_{\mbox{méd}} = \dfrac{\mbox{distância total}}{\Delta t} $
-			\end{center} \pause
+			\end{center} 
 			\begin{itemize}
 				\item s$_{\mbox{méd}}$ não é uma grandeza vetorial;
 				\item o valor de s$_{\mbox{méd}}$ pode ser diferente do valor de v$_{\mbox{méd}}$.
@@ -436,8 +277,8 @@
 	\begin{frame}{Velocidade Escalar Média}
 		\begin{block}{Exercício}
 			Depois de dirigir um carro em uma estrada retilínea por	8,4 km a 70 km/h, você para por falta de gasolina. Nos 30 min seguintes, você caminha por mais 2,0 km ao longo da estrada até chegar a um posto de gasolina.
-				\begin{enumerate} \pause
-					\item Qual foi o deslocamento total, do início da viagem até chegar ao posto de gasolina? \pause
+				\begin{enumerate} 
+					\item Qual foi o deslocamento total, do início da viagem até chegar ao posto de gasolina?
 					\item Qual é o intervalo de tempo $\Delta t$ entre o início da viagem e o instante em que você chega ao posto? 
 				\end{enumerate}
 			
@@ -447,9 +288,9 @@
 	\begin{frame}{Velocidade Escalar Média}
 		\begin{block}{Exercício}
 			Depois de dirigir um carro em uma estrada retilínea por	8,4 km a 70 km/h, você para por falta de gasolina. Nos 30 min seguintes, você caminha por mais 2,0 km ao longo da estrada até chegar a um posto de gasolina.
-			\begin{enumerate} \pause
+			\begin{enumerate}
 				\setcounter{enumi}{2}
-				\item Qual é a velocidade média v$_{\mbox{méd}}$ do início da viagem até a chegada ao posto de gasolina? Determine a solução numericamente e graficamente. \pause
+				\item Qual é a velocidade média v$_{\mbox{méd}}$ do início da viagem até a chegada ao posto de gasolina? Determine a solução numericamente e graficamente. 
 				\item Suponha que para encher um bujão de gasolina, pagar e caminhar de volta para o carro você leva 45 min. Qual é a velocidade escalar média do início da viagem até o momento em que você chega de volta ao lugar onde deixou o carro?
 			\end{enumerate}
 		\end{block}
@@ -460,15 +301,81 @@
 			\includegraphics[scale=0.5]{images/fig2-5}
 		\end{center}
 	\end{frame}
+
+\section{Movimento Retilíneo (Cont.)}
+	\begin{frame}{Velocidade Instantânea}
+		\begin{block}{Velocidade Instantânea}
+			\begin{center}
+				$v = \underset{\Delta t\rightarrow 0}{\lim} \dfrac{\Delta x}{\Delta t} = \dfrac{dx}{dt}$
+			\end{center} \pause
+			\begin{itemize}
+				\item $v$ também é uma grandeza vetorial.
+			\end{itemize}
+		\end{block} \pause
+		\begin{block}{Velocidade Escalar Instantânea}
+			{\bf Velocidade escalar instantânea}, ou, simplesmente, {\bf velocidade escalar}, é o módulo da velocidade, ou seja, a velocidade desprovida de qualquer indicação de direção ou sentido.
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Velocidade Instantânea}
+		\begin{block}{Exercício}
+			As equações a seguir fornecem a posição $x(t)$ de uma partícula em quatro casos (em todas as equações, $x$ está em metros, $t$ em segundos e $t > 0$): 
+				\begin{itemize}
+					\item[] (a) Em que caso(s) a velocidade $v$ da partícula é constante?
+					\item[] (b) Em que caso(s) a velocidade $v$ é no sentido negativo do eixo $x$?
+				\end{itemize}
+			\begin{enumerate} \pause
+				\item $x = 3t - 2$ \pause
+				\item $x = -4t^2 - 2$ \pause
+				\item $x = 2/t^2$ \pause
+				\item $x = -2$ 
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Gráfico posição $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.7]{images/fig2-6a}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráfico velocidade $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.7]{images/fig2-6b}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráficos de $x(t)$ e $v(t)$}
+		\begin{center}
+			\includegraphics[scale=0.6]{images/fig2-6ab}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráfico aceleração $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.7]{images/fig2-6c}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráficos de $v(t)$ e $a(t)$}
+		\begin{center}
+			\includegraphics[scale=0.6]{images/fig2-6bc}
+		\end{center}
+	\end{frame}
 	
 	\begin{frame}{Bônus (0,5 pt)}
 		\begin{block}{Desafio}
-			{\bf (Halliday 3.23)} O oásis B está 25 m a leste do oásis A. Partindo do oásis A, um camelo percorre 24 m em uma direção $15^{\circ}$ ao sul do leste e 8,0 m para o norte. A que distância o camelo está do oásis B?
-		\end{block} \pause
+			{\bf (Halliday 2.72)} Uma pedra é lançada verticalmente para cima a partir da borda do terraço de um edifício. A pedra atinge a altura máxima 1,60 s após ter sido lançada e, em seguida, caindo paralelamente ao edifício, chega ao solo 6,00 s após ter sido lançada. Em unidades do SI:
+			\begin{enumerate}
+				\item com que velocidade a pedra foi lançada? 
+				\item Qual foi a altura máxima atingida pela pedra em relação ao terraço? 
+				\item Qual é a altura do edifício?
+			\end{enumerate}
+		\end{block}
 		\begin{block}{Informações úteis}
 			\begin{itemize}
-                \item Candidaturas (25 de outubro, 17h20);
-                \item Resposta escrita e apresentação (27 de outubro, 19h00).
+                \item Candidaturas (10 de novembro, 17h20);
+                \item Resposta escrita e apresentação (17 de novembro, 19h00).
 			\end{itemize}
 		\end{block} 
 	\end{frame}
