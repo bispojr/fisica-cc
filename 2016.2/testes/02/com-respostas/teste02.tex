@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\usepackage{listings}
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\small,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=HTML,                 % the language of the code
+	otherkeywords={*,...},           % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+	moredelim=**[is][\color{purple}]{@}{@},
+}
+
+
+\author{\\Universidade Federal de Goiás (UFG) - Regional Jataí\\Bacharelado em Ciência da Computação \\Física para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\title{\sc \huge Segundo Teste}
+
+\date{26 de janeiro de 2016}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\footnotesize
+
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 05 (cinco) componentes que formarão a média final da disciplina: dois testes, duas provas e exercícios-bônus;
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+		MF & = & MIN(10, S) \nonumber \\
+		S & = & (\sum_{i=1}^{4} 0,2.T_i ) + 0,2.P  + EB \nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações,
+		\item $T_i$ é a pontuação obtida no teste $i$,
+		\item $P$ é a pontuação obtida na prova, e
+		\item $EB$ é a pontuação total dos exercícios-bônus.
+	\end{itemize}
+	\item O conteúdo exigido compreende os seguintes pontos apresentados no Plano de Ensino da disciplina: (2) Medidas Físicas e Vetores, e (3) Movimentos.
+\end{itemize}
+
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+	\fbox{\large Assinatura: \hspace{9cm}}
+\end{center}
+
+\newpage
+
+\normalsize
+
+\begin{enumerate}
+
+	\item (5,0 pt) {\bf (Halliday 2.15)} Se a posição de uma partícula é dada por $x = 4 -12t  + 3t^2$ (onde $t$ está em segundos e $x$ em metros):
+		\begin{enumerate}
+			\item Qual é a velocidade da partícula em $t = 1$s? 
+			\item O movimento nesse instante é no sentido positivo ou negativo de $x$? 
+			\item Qual é a velocidade escalar da partícula nesse instante?
+			\item A velocidade escalar está aumentando	ou diminuindo nesse instante?
+			\item Existe algum instante no 	qual a velocidade se anula? Caso a resposta seja afirmativa, para que valor de $t$ isso acontece? 
+			\item Existe algum instante após  $t  = 3$s	no qual a partícula está se movendo no sentido negativo de $x$?  Caso a resposta seja afirmativa, para que valor de $t$ isso acontece?
+		\end{enumerate}
+	
+	\vspace{0.3cm}
+	
+	{ \color{blue} 
+		{\bf Resposta:} 
+			\begin{enumerate}
+				\item $x = 4 -12t  + 3t^2$ \ \ 
+					$\therefore$ \ \  $v = -12 + 6t$ (derivada primeira)\\
+					Para $t = 1$ s, temos \\
+					$v = -12 + 6.1 = -6$ m/s
+				\item Sentido negativo, pois a velocidade tem valor negativo.
+				\item $v_{esc} = |v| = 6$ m/s
+				\item Está diminuindo. Pois a aceleração do objeto é positiva \\
+				$v = -12 + 6t$ \ \ 
+				$\therefore$ \ \  $a = 6$ (derivada primeira)\\
+				e a velocidade instantânea é negativa. Logo, a tendência é a velocidade escalar diminuir (e não o oposto).
+				\item Sim, quando $t = 2$ s. \\
+					  Para $v=0$, temos\\
+					  $0 = -12 + 6t$ \ \ $\therefore$ \ \ $6t = 12$ \ \ $\therefore$ \ \ $t = 2$ s.
+				\item Não, não existe. Pois para qualquer valor de $t >  2$ s, a velocidade instantânea será sempre positiva.
+			\end{enumerate}
+	}
+	
+	\newpage
+	
+	\item Em JavaScript, crie uma função {\tt velocidadeEscalarMedia} que receba quatro parâmetros: (i) {\tt x1} (posição inicial), (ii) {\tt x2} (posição final), (iii) {\tt t1} (instante inicial), e (iv) {\tt t2} (instante final). A função deve retornar um número (a velocidade escalar média). É necessário validar a entrada para garantir que  {\tt t2 - t1} seja positivo e não nulo. Se a entrada não for válida, a função deve imprimir, via {\tt console.log}, uma mensagem de erro.
+	
+	{\color{blue} \bf Resposta: }
+	
+\begin{lstlisting}[language=JavaScript]
+function velocidadeEscalarMedia(x1, x2, t1, t2){
+	if(t2 - t1 <= 0){
+		console.log("Variacao de tempo invalida!");
+	}
+	else{
+		var vm = (x2 - x1)/(t2 - t1);
+		vm = Math.abs(vm);
+		return vm;
+	}
+}\end{lstlisting}
+	
+	\end{enumerate}
+\end{document}
