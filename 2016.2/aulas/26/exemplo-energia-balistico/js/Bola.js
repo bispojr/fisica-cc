@@ -22,5 +22,13 @@ function dentroLimiteInferior(canvas) {
         return false;
     }
 }
+function dentroLimiteDireito(canvas) {
+    if (this.x + this.vx + this.raio <= canvas.width) {
+        return true;
+    } else {
+        return false;
+    }
+}
 Bola.prototype.desenhar = desenhar;
 Bola.prototype.dentroLimiteInferior = dentroLimiteInferior;
+Bola.prototype.dentroLimiteDireito = dentroLimiteDireito;
