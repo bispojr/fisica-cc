@@ -1,0 +1,12 @@
+h1 {
+	color: white;
+    font-family: sans-serif;
+    background-color: black;
+    width: 688px;
+    padding: 6px;
+    text-align: center;
+}
+
+#canvas {
+	background-color: cadetblue;
+}
