@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \usepackage{listings}
 \usepackage{xcolor}
@@ -63,7 +64,7 @@
 
 \title{
 	{\sc \huge Lista de Exercícios 4} 
-	\\{\tt Versão 1.0}
+	\\{\tt Versão 1.5}
 }
 
 \begin{document}
@@ -100,9 +101,11 @@
 
 \section{Programação}
 
-	\item Em JavaScript, reescreva a função {\tt emCadaPasso}, conforme vista em sala de aula, de forma que a bola represente o movimento do dardo da Questão \ref{q:dardo} desta lista. Admita que a velocidade inicial seja de 50 px/s.
+	\item[] {\bf Observação:} Para as duas questões a seguir, use como base o código disponível em \url{https://github.com/bispojr/fisica-cc/2016.2/listas/04/codigo-base}.
+
+	\item Em JavaScript, reescreva as funções {\tt valoresIniciais} e {\tt emCadaPasso} de forma que exista uma bola representando o movimento do dardo da Questão \ref{q:dardo} desta lista. Admita que a velocidade inicial seja de 50 px/s e $g$ = 9,8 px/s$^2$.
 	
-	\item Em JavaScript, reescreva a função {\tt emCadaPasso}, conforme vista em sala de aula, de forma que seja representado o movimento da bola da Questão \ref{q:bola} desta lista. Acrescente o fato de que a bola quicará no solo até o repouso. Admita que em cada colisão com o solo, a bola transfere 20\% de sua energia cinética.
+	\item Em JavaScript, reescreva as funções {\tt valoresIniciais} e {\tt emCadaPasso} de forma que exista uma bola que represente o movimento da bola da Questão \ref{q:bola} desta lista. Também represente o precipício como um bloco que tenha uma altura de 300 px (tendo como referência a base inferior do canvas). Acrescente o fato de que a bola quicará no solo até o repouso. Admita que em cada colisão com o solo, a bola transfere 20\% de sua energia cinética.
 		
 \end{enumerate}
 
