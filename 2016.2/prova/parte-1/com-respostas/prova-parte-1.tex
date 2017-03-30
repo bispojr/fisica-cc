@@ -1,0 +1,310 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\small,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=HTML,                 % the language of the code
+	otherkeywords={*,...},           % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+	moredelim=**[is][\color{purple}]{@}{@},
+}
+
+\author{\\Universidade Federal de Goiás (UFG) - Regional Jataí\\Bacharelado em Ciência da Computação \\Física para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\title{\sc \huge Prova (Parte 1)}
+
+\date{28 de março de 2017}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\footnotesize
+
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 05 (cinco) componentes que formarão a média final da disciplina: dois testes, duas provas e exercícios-bônus;
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+		MF & = & MIN(10, S) \nonumber \\
+		S & = & (\sum_{i=1}^{4} 0,2.T_i ) + 0,2.P  + EB \nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações,
+		\item $T_i$ é a pontuação obtida no teste $i$,
+		\item $P$ é a pontuação obtida na prova, e
+		\item $EB$ é a pontuação total dos exercícios-bônus.
+	\end{itemize}
+	\item O conteúdo exigido compreende os seguintes pontos apresentados no Plano de Ensino da disciplina: (1) Fundamentos Matemáticos, (2) Medidas Físicas e Vetores, e (3) Movimentos.
+\end{itemize}
+
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+	\fbox{\large Assinatura: \hspace{9cm}}
+\end{center}
+
+\newpage
+
+\normalsize
+
+\begin{enumerate}
+	
+	\section*{Substitutiva do Teste 01}
+
+	\item (5,0 pt) {\bf (Halliday 1.20)} O recorde para a maior garrafa de vidro foi estabelecido em 1992 por uma equipe de Millville, Nova Jersey, que criou uma garrafa com um volume de 193 galões americanos (admita que 1 galão americano seja 3785,41 cm$^3$, e a massa específica da água seja 1 g/cm$^3$).
+		\begin{enumerate}
+			\item Qual é a diferença entre esse volume e 1,0 milhão de centímetros cúbicos?\\
+			{ \color{blue}
+				{\bf Resposta:} \\
+				(i) esse volume em cm$^3$:
+				\begin{center}
+					$193 \times 3.785,41$ = 730.584,13 cm$^3$
+				\end{center}
+				(ii) a diferença entre esse volume e 1,0 milhão de centímetros cúbicos:
+				\begin{center}
+					730.584,13 - 1.000.000 = -269.415,87 cm$^3$
+				\end{center}
+				
+			}
+			\item Se a garrafa fosse enchida com água a uma vazão de 1,8 g/min, em quanto tempo estaria cheia?\\
+			{ \color{blue}
+				{\bf Resposta:} \\
+				(i) massa em grama de água da garrafa cheia:
+				\begin{center}
+					730.584,13 cm$^3 \times 1$ g/cm$^3$ = 730.584,13 g
+				\end{center}
+				(ii) tempo em minutos para o enchimento da garrafa:
+				\begin{center}
+					(730.584,13 g) / (1,8 g/min) $\cong$ 405.880,07 min\\
+					405.880,07 min $\cong$ 281 d, 20 h, 40 min e 4 s 
+				\end{center}
+				
+			} 
+		\end{enumerate}
+	
+	\newpage
+	
+	\item (5,0 pt) Em JavaScript, crie um protótipo de objeto {\tt Calculadora} que tenha as propriedades de {\tt somar} e {\tt dividir}. Todas estas propriedades são operações binárias, recebem valores inteiros e retornam valores inteiros. Se, para as entradas fornecidas, não for possível gerar um valor de retorno válido, então exiba, via {\tt console.log}, o motivo do não retorno do valor.
+	
+	{\color{blue} Resposta: }
+	
+	\begin{lstlisting}[language=JavaScript]
+	function Calculadora(){
+		this.somar = function(a, b){
+			var sum = a + b;
+			if(Math.round(sum) == sum){
+				return sum;
+			}else{
+				console.log(
+					"Pelo menos uma das parcelas 
+					nao eh um inteiro.");
+			}
+		};
+		this.dividir = function(a, b){
+			if(b == 0){
+				console.log(
+				   "Nao eh permitida realizar 
+				   a divisao por zero. Informe um outro valor."
+				);
+			}else{
+				if(Math.round(a) == a){
+					var div = a / b;
+					if(Math.round(div) == div){
+						return div;
+					}
+					else{
+						console.log(
+							"O resultado da divisao 
+							nao eh inteira."
+						);
+					}
+				}
+			}
+		};
+	}\end{lstlisting}
+	
+	\newpage
+	
+	\section*{Substitutiva do Teste 02}
+	
+	\item (5,0 pt) {\bf (Halliday 2.14)} A função posição $x(t)$ de uma partícula que está se movendo ao longo do eixo $x$ é $x = 4,0 - 6,0t^2$, com $x$ em metros e $t$ em segundos. \label{q:2-14}
+	\begin{enumerate}
+		\item (0,5 pt) Em que instante e\\
+		{ \color{blue}
+			{\bf Resposta:} \\
+			(i) obter v(t) a partir de x(t):
+			\begin{center}
+				v(t) = x'(t) $\therefore$\\
+				v(t) = -12t
+			\end{center}
+			(ii) instante que a particula para momentaneamente:
+			\begin{center}
+				v(t) = -12t \\
+				0 = -12t \\
+				t = 0 s
+			\end{center}			
+		}
+		\item (0,5 pt) Em que posição a partícula para (momentaneamente)?\\
+		{ \color{blue}
+			{\bf Resposta:} \\
+			(i) posição que a particula para momentaneamente:
+			\begin{center}
+				x(t) = $4,0 - 6,0t^2$ \\
+				x(0) = $4,0 - 6,0 \times 0^2$ \\
+				x(0) = 4,0 m
+			\end{center}			
+		}
+		\item (0,5 pt) Em que instante negativo e\\
+		{ \color{blue}
+			{\bf Resposta:} \\
+			(i) instantes em que a partícula passa pela origem:
+			\begin{center}
+				x(t) = $4,0 - 6,0t^2$ \\
+				0 = $4,0 - 6,0t^2$ \\
+				$t^2 = 4/6$ \\
+				t = $\pm \sqrt{\dfrac{4}{6}} = \pm \dfrac{2}{\sqrt{6}} = \pm \dfrac{2\sqrt{6}}{6} = \pm \dfrac{\sqrt{6}}{3} \cong \pm 0,82$ s
+			\end{center}
+			(ii) Logo, o instante negativo em que a partícula passa pela origem é aproximadamente -0,82 s.		
+		}
+		\item (0,5 pt) Em que instante positivo a partícula passa pela origem?\\
+		{ \color{blue}
+			{\bf Resposta:} \\
+			(i) O instante positivo em que a partícula passa pela origem é aproximadamente 0,82 s (ver justificativa na letra (c)).		
+		}
+		\item (1,0 pt) Plote o gráfico de $x$ em função de $t$ \\
+		para o intervalo de -5 s a + 5 s.\\
+		{ \color{blue}
+			{\bf Resposta:}}
+			\begin{center}
+				\begin{tikzpicture}
+					\begin{axis}[
+						xlabel=$t$,
+						ylabel={$x$},
+						xmin=-5,   xmax=5,
+						ymin=-150,   ymax=20,
+						axis lines=middle
+					]
+						% use TeX as calculator:
+						\addplot{4 - 6*x^2};
+					\end{axis}
+				\end{tikzpicture}
+			\end{center}
+		\item (1,0 pt) Para deslocar a curva para a direita no gráfico,\\ devemos acrescentar a $x(t)$ o termo $+20t$ ou o termo $-20t$?\\
+		{ \color{blue}
+			{\bf Resposta:} Devemos acrescentar +20t. Logo x(t) ficaria: \\
+			\begin{center}
+				$x_{mod}(t) = 4,0 + 20t - 6,0t^2$
+			\end{center}
+		}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xlabel=$t$,
+			ylabel={$x_{mod}$},
+			xmin=-5,   xmax=5,
+			ymin=-150,   ymax=50,
+			axis lines=middle
+			]
+			% use TeX as calculator:
+			\addplot{4 + 20*x -6*x^2};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\newpage
+		
+		\item (1,0 pt) Essa modificação aumenta ou diminui o valor de $x$ para o qual a partícula para momentaneamente?\\
+		{ \color{blue}
+			{\bf Resposta:} \\
+			(i) obter v$_{mod}(t)$ a partir de x$_{mod}(t)$:
+			\begin{center}
+				v$_{mod}(t) =$ x'$_{mod}(t)$ $\therefore$\\
+				v$_{mod}(t) = -12t + 20$
+			\end{center}
+			(ii) instante que a partícula para momentaneamente:
+				\begin{eqnarray*}
+					v_{mod}(t) 	& = & -12t + 20 \\
+					0 			& = & -12t + 20 \\
+					t 			& \cong & 1,67 s
+				\end{eqnarray*}
+			(ii) posição que a partícula para momentaneamente:
+			\begin{eqnarray*}
+				x_{mod}(t) 	& = & 4,0 + 20t - 6,0t^2 \\
+				x_{mod}(1,67) 	& = & 4,0 + 20 \times 1,67 - 6,0 \times (1,67)^2 \\
+				x_{mod}(1,67) 	& \cong & 4,0 + 33,4 -16,73 \\
+				x_{mod}(1,67) 	& \cong & 20,67 m
+			\end{eqnarray*}	
+			A posição que partícula para é aproximadamente 20,67 m. Como antes a posição era 4,0 m, então a modificação aumenta o valor de x.
+		}
+	\end{enumerate}
+
+	\item (5,0 pt) Em JavaScript, crie uma função {\tt posicao} que recebe {\tt t} como parâmetro (conforme equação apresentada na questão \ref{q:2-14}). A função deve retornar um número (a posição da partícula).
+	
+	{\color{blue} {\bf Resposta:} }
+	
+	\begin{lstlisting}[language=JavaScript]
+	function posicao(t){
+		var pos = 4 - 6*t*t;
+		return pos;
+	}\end{lstlisting}
+	
+	\end{enumerate}
+
+\end{document}

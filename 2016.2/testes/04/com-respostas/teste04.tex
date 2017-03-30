@@ -1,0 +1,321 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\usepackage{listings}
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{\[ }{\]},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\small,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=HTML,                 % the language of the code
+	otherkeywords={*,...},           % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+	moredelim=**[is][\color{purple}]{@}{@},
+}
+
+\author{\\Universidade Federal de Goiás (UFG) - Regional Jataí\\Bacharelado em Ciência da Computação \\Física para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\title{\sc \huge Quarto Teste}
+
+\date{07 de março de 2017}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\footnotesize
+
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 05 (cinco) componentes que formarão a média final da disciplina: dois testes, duas provas e exercícios-bônus;
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+		MF & = & MIN(10, S) \nonumber \\
+		S & = & (\sum_{i=1}^{4} 0,2.T_i ) + 0,2.P  + EB \nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações,
+		\item $T_i$ é a pontuação obtida no teste $i$,
+		\item $P$ é a pontuação obtida na prova, e
+		\item $EB$ é a pontuação total dos exercícios-bônus.
+	\end{itemize}
+	\item O conteúdo exigido compreende os seguintes pontos apresentados no Plano de Ensino da disciplina: (2) Medidas Físicas e Vetores, (3) Movimentos, (4) Trabalho e Energia, (5) Colisões, e (7) Outros Tópicos.
+\end{itemize}
+
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+	\fbox{\large Assinatura: \hspace{9cm}}
+\end{center}
+
+\newpage
+
+\normalsize
+
+\begin{enumerate}
+
+	\item (5,0 pt) {\bf (Halliday 4.21)} Um dardo é arremessado horizontalmente com uma velocidade inicial de 10 m/s em direção a um ponto P, o centro de um alvo de parede. O dardo atinge um ponto Q do alvo, verticalmente abaixo de P, 0,19 s depois do arremesso. \label{q:dardo}
+	\begin{enumerate}
+		\item Qual é a distância PQ?
+		
+		{\color{blue} {\bf Resposta:} Basta calcular a distância percorrida da componente $y$ em 0,19 s.\\
+			\\
+			Distância PQ$\therefore$ \\
+			$\Delta y = v_0t + \frac{1}{2}at^2$\\
+			$\Delta y = 0$ m/s $\times$ 0,19 s + $\frac{1}{2}(-9,8$ m/s$^2$)(0,19 s)$^2$\\
+			$\Delta y \cong$ 0,177 m
+		}
+		\item A que distância do alvo foi arremessado o dardo?
+		
+			{\color{blue} {\bf Resposta:} Basta calcular a distância percorrida da componente $x$ em 0,19 s.\\
+				\\
+				Distância do alvo$\therefore$ \\
+				$\Delta x = vt$\\
+				$\Delta x = 10$ m/s $\times$ 0,19 s\\
+				$\Delta x =$ 1,9 m
+			}
+	\end{enumerate}
+
+\newpage
+
+	\item Em JavaScript, adapte as funções {\tt valoresIniciais} e {\tt emCadaPasso} conforme apresentada abaixo. Você deve substituir apenas as linhas 7, 10 e 14, pelos trechos de código 1, 2 e 3, respectivamente. O objetivo é que uma bola faça o movimento de queda livre de cabeça para baixo (ao invés da bola cair para baixo, ela deve ``cair para cima''). Lembre-se de que a bola quicará no teto até o repouso. Admita que em cada colisão com o teto, a bola transfere 20\% de sua energia cinética. Admita também que velocidade inicial da bola, no eixo y, seja zero e que $g = 9,8$ px/s$^2$.
+	
+	\begin{lstlisting}[language=JavaScript]
+function valoresIniciais() {
+	this.bola = new Bola(50, '#0000ff');
+	
+	this.bola.x = 100;
+	this.bola.y = this.canvas.height - 50;
+	
+	[TRECHO 1]
+}
+function emCadaPasso() {    
+	if ( [TRECHO 2] ) {
+		this.bola.y += this.bola.vy;
+		this.bola.vy += this.bola.ay;
+	} 
+	[TRECHO 3]
+	
+	this.limparCanvas();
+	this.bola.desenhar(this.contexto);
+	this.bloco.desenhar(this.contexto);
+}\end{lstlisting}
+
+\newpage
+
+{\color{blue} \bf RESPOSTA: } \\
+\begin{lstlisting}[language=JavaScript]
+[TRECHO 1]
+this.bola.vy = 0;
+this.bola.ay = -9.8 / 60;
+
+this.bloco = new Bloco(10, 10, "green"); 
+this.bloco.x = 10;
+this.bloco.y = this.canvas.height - 10;
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript]
+[TRECHO 2]
+this.bola.dentroLimiteSuperior(this.canvas) //Corrigido
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript]
+[TRECHO 3]
+else{
+	this.bola.vy *= -0.8;
+}
+\end{lstlisting}
+	
+\end{enumerate}
+
+\newpage
+
+\section{Fórmulas Auxiliares}
+
+\subsection{Movimento Uniforme (MU)}
+
+\begin{enumerate}
+	\item $x = x_0 + vt$ 
+\end{enumerate}
+
+\subsection{Movimento Uniformemente Variado (MUV)}
+
+\begin{enumerate}
+	\item $x - x_0 = v_0t + \frac{1}{2}at^2$ 
+	\item $v = v_0 + at$ 
+	\item $x - x_0 = \frac{1}{2}(v_0 + v)t$ 
+	\item $x - x_0 = vt - \frac{1}{2} a t^2$
+	\item $v^2 = v_0^2 + 2a(x - x_0)$
+\end{enumerate}
+
+\section*{Protótipo Bola}
+
+\begin{lstlisting}[language=JavaScript]
+function Bola(raio, cor) {
+	this.raio = raio;
+	this.cor = cor;
+	this.x = 0;
+	this.y = 0;
+	this.vx = 0;
+	this.vy = 0;
+	this.ax = 0;
+	this.ay = 0;
+}
+function desenhar(contexto){
+	contexto.fillStyle = this.cor;
+	contexto.beginPath();
+	contexto.arc(this.x, this.y, this.raio, 0, 2 * Math.PI, true);
+	contexto.closePath();
+	contexto.fill();
+}
+function dentroLimiteInferior(canvas) {
+	if (this.y + this.vy + this.raio <= canvas.height) {
+		return true;
+	} else {
+		return false;
+	}
+}
+function dentroLimiteSuperior(canvas) {
+	if (this.y + this.vy + this.raio <= 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+function dentroLimiteDireito(canvas) {
+	if (this.x + this.vx + this.raio <= canvas.width) {
+		return true;
+	} else {
+		return false;
+	}
+}
+Bola.prototype.desenhar = desenhar;
+Bola.prototype.dentroLimiteInferior = dentroLimiteInferior;
+Bola.prototype.dentroLimiteSuperior = dentroLimiteSuperior;
+Bola.prototype.dentroLimiteDireito = dentroLimiteDireito;
+\end{lstlisting}
+
+\section*{Protótipo Bloco}
+
+\begin{lstlisting}[language=JavaScript]
+function Bloco(largura, altura, cor) {
+	this.largura = largura;
+	this.altura = altura;
+	this.cor = cor;
+	this.x = 0;
+	this.y = 120;
+}
+function desenhar(contexto){    
+	contexto.fillStyle = this.cor;
+	contexto.beginPath();    
+	contexto.rect(this.x, this.y, this.largura, this.altura);
+	contexto.closePath();
+	contexto.fill();
+}
+Bloco.prototype.desenhar = desenhar;
+\end{lstlisting}
+
+\section*{Protótipo Ambiente}
+
+\begin{lstlisting}[language=JavaScript]
+function Ambiente(){}
+function iniciar() {    
+	this.canvas = document.getElementById('canvas');
+	this.contexto = this.canvas.getContext('2d');
+	
+	this.valoresIniciais();
+	
+	setInterval(this.emCadaPasso, 1000 / 60); // 60 fps
+}
+function valoresIniciais() {
+	this.bola = new Bola(50, '#0000ff');
+	
+	this.bola.x = 210;
+	this.bola.y = 70;
+	
+	this.bola.vx = 55 / 60;
+	this.bola.vy = 0;
+	
+	this.bola.ax = 0;
+	this.bola.ay = 9.8 / 60;
+}
+function emCadaPasso() {    
+	if (this.bola.dentroLimiteInferior(this.canvas)) {
+		this.bola.y += this.bola.vy;
+		this.bola.vy += this.bola.ay;
+	} 
+	
+	this.limparCanvas();
+	this.bola.desenhar(this.contexto); // desenhe a bola 
+	this.bloco.desenhar(this.contexto);
+}
+function limparCanvas(){
+	this.contexto.clearRect(0, 0, this.canvas.width, this.canvas.height);
+}
+Ambiente.prototype.iniciar = iniciar;
+Ambiente.prototype.valoresIniciais = valoresIniciais;
+Ambiente.prototype.emCadaPasso = emCadaPasso;
+Ambiente.prototype.limparCanvas = limparCanvas;
+\end{lstlisting}
+
+\section*{Arquivo Principal}
+
+\begin{lstlisting}[language=JavaScript]
+var amb = new Ambiente();
+window.onload = amb.iniciar;
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{jpurple}\bfseries,
+  stringstyle=\color{red},
+  commentstyle=\color{verde},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{cyan!10}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  tabsize=4,
+  escapeinside=||
+}
+
+\author{\\Universidade Federal de Goiás (UFG) - Regional Jataí\\Bacharelado em Ciência da Computação \\Física para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\title{\sc \huge Prova (Parte 1)}
+
+\date{28 de março de 2017}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\footnotesize
+
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 05 (cinco) componentes que formarão a média final da disciplina: dois testes, duas provas e exercícios-bônus;
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+		MF & = & MIN(10, S) \nonumber \\
+		S & = & (\sum_{i=1}^{4} 0,2.T_i ) + 0,2.P  + EB \nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações,
+		\item $T_i$ é a pontuação obtida no teste $i$,
+		\item $P$ é a pontuação obtida na prova, e
+		\item $EB$ é a pontuação total dos exercícios-bônus.
+	\end{itemize}
+	\item O conteúdo exigido compreende os seguintes pontos apresentados no Plano de Ensino da disciplina: (1) Fundamentos Matemáticos, (2) Medidas Físicas e Vetores, e (3) Movimentos.
+\end{itemize}
+
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+	\fbox{\large Assinatura: \hspace{9cm}}
+\end{center}
+
+\newpage
+
+\normalsize
+
+\begin{enumerate}
+	
+	\section*{Substitutiva do Teste 01}
+
+	\item (5,0 pt) {\bf (Halliday 1.20)} O recorde para a maior garrafa de vidro foi estabelecido em 1992 por uma equipe de Millville, Nova Jersey, que criou uma garrafa com um volume de 193 galões americanos (admita que 1 galão americano seja 3785,41 cm$^3$, e a massa específica da água seja 1 g/cm$^3$).
+		\begin{enumerate}
+			\item Qual é a diferença entre esse volume e 1,0 milhão de centímetros cúbicos?
+			\item Se a garrafa fosse enchida com água a uma vazão de 1,8 g/min, em quanto tempo estaria cheia? 
+		\end{enumerate}
+	
+	
+	\item (5,0 pt) Em JavaScript, crie um protótipo de objeto {\tt Calculadora} que tenha as propriedades de {\tt somar} e {\tt dividir}. Todas estas propriedades são operações binárias, recebem valores inteiros e retornam valores inteiros. Se, para as entradas fornecidas, não for possível gerar um valor de retorno válido, então exiba, via {\tt console.log}, o motivo do não retorno do valor.
+	
+	\section*{Substitutiva do Teste 02}
+	
+	\item (5,0 pt) {\bf (Halliday 2.14)} A função posição $x(t)$ de uma partícula que está se movendo ao longo do eixo $x$ é $x = 4,0 - 6,0t^2$, com $x$ em metros e $t$ em segundos. \label{q:2-14}
+	\begin{enumerate}
+		\item Em que instante e
+		\item Em que posição a partícula para (momentaneamente)?
+		\item Em que instante negativo e
+		\item Em que instante positivo a partícula passa pela origem?
+		\item Plote o gráfico de $x$ em função de $t$ \\
+		para o intervalo de -5 s a + 5 s.
+		\item Para deslocar a curva para a direita no gráfico,\\ devemos acrescentar a $x(t)$ o termo $+20t$ ou o termo $-20t$?
+		\item Essa modificação aumenta ou diminui o valor de $x$ para o qual a partícula para momentaneamente?
+	\end{enumerate}
+
+	\item (5,0 pt) Em JavaScript, crie uma função {\tt posicao} que recebe {\tt t} como parâmetro (conforme equação apresentada na questão \ref{q:2-14}). A função deve retornar um número (a posição da partícula).
+	
+	\end{enumerate}
+
+\end{document}
