@@ -1,0 +1,487 @@
+\documentclass[xcolor=dvipsnames,table]{beamer}
+
+\usepackage{latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]",
+}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\small,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=HTML,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+  moredelim=**[is][\color{purple}]{@}{@},
+}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  \definecolor{colortexto}{RGB}{0,0,0}
+ 
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+}
+
+\title{HTML, CSS e JavaScript (Parte 2)} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Física para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{28 de agosto de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\AtBeginSection{
+		\begin{frame}{Sumário}%[allowframebreaks]{Sumário}
+    		\tableofcontents[currentsection]
+    		%\tableofcontents[currentsection, hideothersubsections]
+		\end{frame}
+	}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+
+%------------------------------------------
+	\section{Revisão}
+		
+\subsection{HTML5}
+\begin{frame}[fragile]{HTML5}
+	\begin{block}{O que é?}
+			HTML5 é a nova ``encarnação'' do padrão HTML. \\Ele traz novas capacidades para o navegador.
+		\end{block} 
+		\begin{block}{Um exemplo mínimo em HTML5}
+			\begin{lstlisting}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Um documento minimo em HTML5</title>
+	</head>
+	<body>
+		<h1>Boa noite, HTML5!</h1>
+	</body>
+</html>
+\end{lstlisting}
+		\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{HTML5}
+	\begin{block}{Elemento Canvas}
+		Permite renderizar gráficos e animação no navegador sem necessitar de uso de plugins externos (como {\it FlashPlayer}).
+	\end{block} 
+		\begin{block}{...basta incluir esta linha no corpo do documento}
+			\begin{lstlisting}
+<canvas id="canvas" width="700" height="500">
+</canvas>
+\end{lstlisting}
+		\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{HTML5}
+	\begin{block}{Exemplo}
+		\begin{lstlisting}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Um documento minimo em HTML5</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="700" height="500">
+		</canvas>
+	</body>
+</html>
+\end{lstlisting}
+		\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{HTML5}
+	\begin{block}{Pôr estilo no Canvas}
+		Como qualquer elemento HTML. Você pode, por exemplo, ligar o arquivo HTML a um arquivo CSS externo.
+	\end{block}
+	\begin{block}{...basta incluir esta linha no {\tt head} do documento}
+			\begin{lstlisting}
+<link rel="stylesheet" href="style.css">
+\end{lstlisting}
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{HTML5}
+	\begin{block}{Exemplo}
+		\begin{lstlisting}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Um documento minimo em HTML5</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<canvas id="canvas" width="700" height="500">
+		</canvas>
+	</body>
+</html>
+\end{lstlisting}
+		\end{block}
+\end{frame}
+
+\subsection{JavaScript}
+\begin{frame}[fragile]{Adicionando JavaScript}
+	\begin{block}{Ligando o arquivo .js ao corpo do HTML}
+		\begin{lstlisting}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Um documento minimo em HTML5</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<canvas id="canvas" width="700" height="500">
+		</canvas>
+		<script src= "bolaQuicando.js"></script>
+	</body>
+</html>
+\end{lstlisting}
+		\end{block}
+\end{frame}
+
+\begin{frame}{Depurando no JavaScript}
+	\begin{block}{Via Google Chrome...}
+		Tecle \fbox{Ctrl + Shift + J}.
+	\end{block} 
+	\begin{block}{Teste...}
+		\begin{itemize}
+			\item {\tt 2 + 3}
+			\item {\tt console.log("Hello World")}
+			\item {\tt a=2; b=3; console.log(a*b);}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Objetos em JavaScript}
+	\begin{block}{Considerações iniciais...}
+		Em JavaScript, os objetos são as unidades básicas.
+	\end{block} 
+	\begin{block}{O que é um objeto?}
+		Uma coleção de propriedades	
+	\end{block} 
+	\begin{block}{O que é uma propriedade?}
+		É uma associação entre um nome e um valor.
+	\end{block}
+	\begin{block}{O que é um valor?}
+		Pode ser um número inteiro, uma cadeia, uma função, entre outros.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Objetos predefinidos}
+	\begin{block}{Alguns Objetos predefinidos...}
+		\begin{itemize}
+			\item {\tt String}
+			\item {\tt Array}
+			\item {\tt Date}
+			\item {\tt Math}...
+		\end{itemize}
+	\end{block} 
+	\begin{block}{Criando novos objetos...}
+		\begin{itemize}
+			\item {\tt obj = new Object();}
+			\\ou
+			\item {\tt obj = \{\};}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Atribuindo propriedades}
+	\begin{block}{Exemplo 1: Utilizando ponto...}
+		\begin{lstlisting}[language=JavaScript]
+obj = new Object();
+obj.nome = "Primeiro objeto";
+obj.length = 20;
+console.log(obj.nome, obj.length);
+\end{lstlisting}	
+	\end{block} 
+	\begin{block}{Exemplo 2: Utilizando colchetes...}
+		\begin{lstlisting}[language=JavaScript]
+obj = {};
+obj["nome"] = "Primeiro objeto";
+obj["length"] = 20;
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Funções e Métodos}
+	\begin{block}{O que é uma função?}
+		É um bloco de código que é executado quando chamado pelo seu nome.
+	\end{block} 
+	\begin{block}{Sintaxe para a definição de função sem argumentos}
+		\begin{lstlisting}[language=JavaScript]
+function nomeDaFuncao(){
+	//bloco de codigo
+}
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Funções e Métodos}
+	\begin{block}{Sintaxe para a definição de função com argumentos}
+		\begin{lstlisting}[language=JavaScript]
+function nomeDaFuncao(arg1, arg2){
+	//bloco de codigo
+}
+\end{lstlisting}	
+	\end{block} 
+	\begin{block}{A função pode retornar valores}
+		\begin{lstlisting}[language=JavaScript]
+function multiplicar(x, y){
+	return x*y;
+}
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\section{Continuação...}
+\begin{frame}[fragile]{Funções e Métodos}
+	\begin{block}{Atribuindo uma função como propriedade de um objeto...}
+		\begin{lstlisting}[language=JavaScript]
+nomeDoObjeto.nomeDaPropriedade = nomeDaFuncao;
+\end{lstlisting}	
+	\end{block} \pause
+	\begin{block}{Exemplo}
+		\begin{lstlisting}[language=JavaScript]
+obj.multiplicar = multiplicar;
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\section{Herança, Construtores e Protótipos}
+\subsection{Herança}
+\begin{frame}{Herança}
+	\begin{center}
+		\includegraphics[scale=0.3]{images/heranca01.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Herança}
+	\begin{center}
+		\includegraphics[scale=0.3]{images/heranca02.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Herança}
+	\begin{center}
+		\includegraphics[scale=0.3]{images/heranca03.png}
+	\end{center}
+\end{frame}
+
+\subsection{Construtores}
+\begin{frame}[fragile]{Construtor}
+	\begin{block}{Objeto a partir de uma função}
+		É possível construir um objeto a partir de uma ``função-modelo''.
+		\begin{lstlisting}[language=JavaScript]
+function Particula(pnome){
+	this.nome = pnome;
+	this.mover = function(){
+		console.log(this.nome + " em movimento!");
+	};
+}
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Construtor}
+	\begin{block}{Objeto a partir de uma função}
+		\begin{lstlisting}[language=JavaScript]
+particula1 = new Particula("eletron");
+console.log(particula1.nome); //exibe "eletron"
+particula1.mover();	
+			//exibe "eletron em movimento"
+\end{lstlisting}	
+	\end{block} \pause
+	\begin{block}{Construtor...}
+		Se uma função é utilizada intencionalmente para criar novos objetos, a chamamos de {\bf construtor}.
+	\end{block}
+\end{frame}
+
+\subsection{Protótipo}
+\begin{frame}[fragile]{Protótipo}
+	\begin{block}{Adicionando propriedades...}
+		Após declarado, é possível adicionar propriedades a um construtor.
+		\begin{lstlisting}[language=JavaScript]
+Particula.prototype.massa = 1;
+Particula.prototype.parar = 
+		function(){console.log("Eu parei.");};
+\end{lstlisting}	
+	\end{block} \pause
+	\begin{block}{Para novos objetos...}
+		\begin{lstlisting}[language=JavaScript]
+particula2 = new Particula("proton");
+console.log(particula2.massa); //exibe 1
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Protótipo}
+	\begin{block}{Entretanto...}
+		\begin{lstlisting}[language=JavaScript]
+particula3 = new Particula("neutron");
+particula3.massa = 2;	//propriedade com valor 2
+console.log(Particula.prototype.massa);	//exibe 1
+\end{lstlisting}	
+	\end{block} \pause
+	\begin{alertblock}{Necessário ter em mente...}
+		A propriedade {\tt prototype} modifica o objeto-pai.	
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Protótipo}
+	\begin{block}{Algo interessante...}
+		É possível adicionar propriedades apenas para o objeto-filho.
+		\begin{lstlisting}[language=JavaScript]
+particula4 = new Particula("neutrino");
+particula4.spin = 0; //exibe 0
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Exemplo...}
+	\begin{block}{Objeto Bola}
+		\begin{lstlisting}[language=JavaScript]
+function Bola (raio, cor) {
+	this.raio = raio;
+	this.cor = cor;
+	this.x = 0;
+	this.y = 0;
+	this.vx = 0;
+	this.vy = 0;
+}
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Exemplo...}
+	\begin{block}{Objeto Bola}
+		\begin{lstlisting}[language=JavaScript]
+Bola.prototype.desenhar = function (contexto) {
+	contexto.fillStyle = this.cor;
+	contexto.beginPath();
+	contexto.arc(this.x, this.y, 
+							this.raio, 0, 2*Math.PI, true);
+	contexto.closePath();
+	contexto.fill();
+};
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Exemplo...} 
+	\begin{block}{HTML Canvas {\tt arc}}
+		A propriedade {\tt arc()} cria um arco \\(utilizado para criar círculos ou parte de círculos). 
+	\end{block}
+	\begin{block}{Sintaxe}
+		{\tt arc(x, y, raio, angIni, angFin, antiHor);}
+	\end{block}
+	\begin{block}{Argumentos}
+		\begin{itemize}
+			\item {\tt x} e {\tt y}: coordenadas do arco;
+			\item {\tt raio}: raio do arco; 
+			\item {\tt angIni} e {\tt angFin}: ângulos inicial e final do arco \\(em radianos);
+			\item {\tt antiHor}: valor booleano para o sentido anti-horário.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Exemplo...}
+	\begin{center}
+		\includegraphics[scale=0.4]{images/arc.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Exemplo...}
+	\begin{block}{Objeto Bola}
+		\begin{lstlisting}[language=JavaScript]
+var canvas = document.getElementById('canvas');
+var contexto = canvas.getContext('2d');
+var bola = new Bola(50,'#0000ff');
+bola.x = 100;
+bola.y = 100;
+bola.desenhar(contexto);
+\end{lstlisting}	
+	\end{block}
+\end{frame}
+
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
