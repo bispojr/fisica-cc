@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\small,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=HTML,                 % the language of the code
+	otherkeywords={*,...},           % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2,	                   % sets default tabsize to 2 spaces
+	title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+	moredelim=**[is][\color{purple}]{@}{@},
+}
+
+\author{\\Universidade Federal de Goiás (UFG) - Regional Jataí\\Bacharelado em Ciência da Computação \\Física para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\title{\sc \huge Primeiro Teste}
+
+\date{02 de setembro de 2019}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\footnotesize
+
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 06 (seis) componentes que formarão a média final da disciplina: quatro mini-testes (MT), uma prova final (PF) e eventuais exercícios-bônus propostos (EB);
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+	MF & = & MIN(10, S) \nonumber \\
+	S & = & [(\sum_{i=1}^{4} max(MT_i, SMT_i ) + PF].0,2  + EB \nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações, e
+		\item $SMT_i$ é a substitutiva do mini-teste $i$.
+	\end{itemize}
+	\item O conteúdo exigido compreende os seguintes pontos apresentados no Plano de Ensino da disciplina: (1) Medição e Grandezas Físicas, e (2) Tecnologias Básicas.
+\end{itemize}
+
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+	\fbox{\large Assinatura: \hspace{9cm}}
+\end{center}
+
+\newpage
+
+\normalsize
+
+\begin{enumerate}
+
+	\item (5,0 pt) {\bf (Halliday 1.21  [Adaptado])} 
+	\begin{enumerate}
+		\item Supondo que a água tenha uma massa específica de exatamente 1 g/$\mbox{cm}^3$, determine a massa de 5 metro cúbico de água em quilogramas.
+		
+		\vspace*{0.3cm}
+		
+		{\color{blue} {\bf Resposta:} 
+			\begin{eqnarray*}
+				\dfrac{1 g}{1 \mbox{ cm}^3} & = & \dfrac{x}{5 \mbox{ m}^3}	\\
+				\dfrac{1 g}{1 \mbox{ cm}^3} & = & \dfrac{x}{5 \times 100^3 \mbox{ cm}^3}	\\
+				x & = & 5 \times 100^3 \mbox{ g} \\
+				x & = & 5 \times 10^6 \mbox{ g} \\
+				x & = & 5 \times 10^3 \mbox{ kg}
+			\end{eqnarray*}
+		}
+		\item Suponha que sejam necessárias 7,0 h para drenar um recipiente com 4900 $m^3$ de água. Qual é a ``vazão mássica'' da água do recipiente, em quilogramas por segundo?
+		
+		\vspace*{0.3cm}
+		
+		{\color{blue} {\bf Resposta:} (1) Massa da água em kg
+			\begin{eqnarray*}
+				\dfrac{5 \mbox{ m}^3}{5 \times 10^3 \mbox{ kg}} & = & \dfrac{4900 \mbox{ m}^3}{x}	\\
+				x{} & = & \dfrac{4900 \mbox{ m}^3 \times 5 \times 10^3 \mbox{ kg}}{5 \mbox{ m}^3}	\\
+				x & = & 4,9 \times 10^6  \mbox{ kg}
+			\end{eqnarray*}
+		
+		(2) Tempo de drenagem em segundos
+			\begin{eqnarray*}
+				t = 7,0 \mbox{ h} = 7 \times 60 \times 60 \mbox{ s}	=  2,52 \times 10^4 \mbox{ s}
+			\end{eqnarray*}
+		
+		(3) Vazão mássica em kg/s
+			\begin{eqnarray*}
+				v  =  \dfrac{4,9 \times 10^6  \mbox{ kg}}{2,52 \times 10^4 \mbox{ s}}	\cong 2 \times 10^2 \mbox{ kg/s}
+			\end{eqnarray*}
+		}
+	\end{enumerate}
+
+\newpage 
+
+	\item (5,0 pt) Em JavaScript, crie um protótipo de objeto {\tt Planeta} que tenha as propriedades (i) {\tt nome}, (ii) {\tt raio}, (iii) {\tt distanciaTerra}, e (iv) {\tt descricao}. O {\tt nome} é uma cadeia; a {\tt raio} e a {\tt distanciaTerra} são valores numéricos (em quilômetros); e a {\tt descricao} é uma função que exibe, via {\tt console.log}, todas as demais propriedades de {\tt Planeta}. Crie um objeto a partir de {\tt Planeta}. Atribua valores para as proprieda\-des ao seu gosto.
+	
+	\vspace{0.3cm}
+	
+	{\color{blue} {\bf Resposta:} }
+	
+	\begin{lstlisting}[language=JavaScript]
+function Planeta(nome, raio, distanciaTerra){
+	this.nome = nome;
+	this.raio = raio;
+	this.distanciaTerra = distanciaTerra;
+	this.descricao = function(){
+		console.log("===DESCRICAO===");
+		console.log("Nome: " + this.nome);
+		console.log("Raio: " + this.raio);
+		console.log("Distancia da Terra: " + this.distanciaTerra);
+		};
+	}
+	
+	planeta1 = new Planeta("Saturnino", 6400, 12000);
+	planeta1.descricao();	//exibe os dados do objeto
+	\end{lstlisting}
+	
+	\end{enumerate}
+\end{document}
