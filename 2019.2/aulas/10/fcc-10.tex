@@ -1,0 +1,244 @@
+\documentclass[xcolor=dvipsnames,table]{beamer}
+
+\usepackage{latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]",
+}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\small,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=HTML,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+  moredelim=**[is][\color{purple}]{@}{@},
+}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  \definecolor{colortexto}{RGB}{0,0,0}
+ 
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+  \setbeamercolor{normal text}{fg=colortexto} 
+
+  \usetheme{Warsaw}
+}
+
+\title{Movimento Retilíneo (Parte 3)} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  Física para Ciência da Computação \\Bacharelado em Ciência da Computação}
+\date{\textbf{16 de setembro de 2019} }
+
+\logo{\includegraphics[width=1cm]{images/ufgJataiLogo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\AtBeginSection{
+		\begin{frame}{Sumário}%[allowframebreaks]{Sumário}
+    		\tableofcontents[currentsection]
+    		%\tableofcontents[currentsection, hideothersubsections]
+		\end{frame}
+	}
+
+	\begin{frame}{Plano de Aula}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+
+%------------------------------------------
+
+	
+%------------------------------------------
+	\section{Revisão}
+	\begin{frame}{Velocidade Média}
+		\begin{block}{Velocidade Média}
+			\begin{center}
+				v$_{\mbox{méd}} = \dfrac{\Delta x}{\Delta t} = \dfrac{x_2 - x_1}{t_2 - t_1}$
+			\end{center} 
+			\begin{itemize}
+				\item $x_1$ é a posição no instante $t_1$;
+				\item $x_2$ é a posição no instante $t_2$; 
+				\item No SI, a unidade de v$_{\mbox{méd}}$ é $m/s$; 
+				\item v$_{\mbox{méd}}$ também é uma grandeza vetorial.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+
+	\begin{frame}{Gráfico posição $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.35]{images/fig2-4}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Velocidade Escalar Média}
+		\begin{block}{Velocidade Escalar Média}
+			\begin{center}
+				s$_{\mbox{méd}} = \dfrac{\mbox{distância total}}{\Delta t} $
+			\end{center} 
+			\begin{itemize}
+				\item s$_{\mbox{méd}}$ não é uma grandeza vetorial;
+				\item o valor de s$_{\mbox{méd}}$ pode ser diferente do valor de v$_{\mbox{méd}}$.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Velocidade Escalar Média}
+		\begin{block}{Exercício}
+			Depois de dirigir um carro em uma estrada retilínea por	8,4 km a 70 km/h, você para por falta de gasolina. Nos 30 min seguintes, você caminha por mais 2,0 km ao longo da estrada até chegar a um posto de gasolina.
+				\begin{enumerate} 
+					\item Qual foi o deslocamento total, do início da viagem até chegar ao posto de gasolina?
+					\item Qual é o intervalo de tempo $\Delta t$ entre o início da viagem e o instante em que você chega ao posto? 
+				\end{enumerate}
+			
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Velocidade Escalar Média}
+	\begin{block}{Exercício}
+		Depois de dirigir um carro em uma estrada retilínea por	8,4 km a 70 km/h, você para por falta de gasolina. Nos 30 min seguintes, você caminha por mais 2,0 km ao longo da estrada até chegar a um posto de gasolina.
+		\begin{enumerate}
+			\setcounter{enumi}{2}
+			\item Qual é a velocidade média v$_{\mbox{méd}}$ do início da viagem até a chegada ao posto de gasolina? Determine a solução numericamente e graficamente. 
+			\item Suponha que para encher um bujão de gasolina, pagar e caminhar de volta para o carro você leva 45 min. Qual é a velocidade escalar média do início da viagem até o momento em que você chega de volta ao lugar onde deixou o carro?
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Gráfico posição $\times$ tempo}
+\begin{center}
+\includegraphics[scale=0.5]{images/fig2-5}
+\end{center}
+\end{frame}
+	
+	\section{Movimento Retilíneo (Cont.)}
+	\begin{frame}{Velocidade Instantânea}
+		\begin{block}{Velocidade Instantânea}
+			\begin{center}
+				$v = \underset{\Delta t\rightarrow 0}{\lim} \dfrac{\Delta x}{\Delta t} = \dfrac{dx}{dt}$
+			\end{center} \pause
+			\begin{itemize}
+				\item $v$ também é uma grandeza vetorial.
+			\end{itemize}
+		\end{block} \pause
+		\begin{block}{Velocidade Escalar Instantânea}
+			{\bf Velocidade escalar instantânea}, ou, simplesmente, {\bf velocidade escalar}, é o módulo da velocidade, ou seja, a velocidade desprovida de qualquer indicação de direção ou sentido.
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Velocidade Instantânea}
+		\begin{block}{Exercício}
+			As equações a seguir fornecem a posição $x(t)$ de uma partícula em quatro casos (em todas as equações, $x$ está em metros, $t$ em segundos e $t > 0$): 
+				\begin{itemize}
+					\item[] (a) Em que caso(s) a velocidade $v$ da partícula é constante?
+					\item[] (b) Em que caso(s) a velocidade $v$ é no sentido negativo do eixo $x$?
+				\end{itemize}
+			\begin{enumerate} \pause
+				\item $x = 3t - 2$ \pause
+				\item $x = -4t^2 - 2$ \pause
+				\item $x = 2/t^2$ \pause
+				\item $x = -2$ 
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Gráfico posição $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.7]{images/fig2-6a}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráfico velocidade $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.7]{images/fig2-6b}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráficos de $x(t)$ e $v(t)$}
+		\begin{center}
+			\includegraphics[scale=0.6]{images/fig2-6ab}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráfico aceleração $\times$ tempo}
+		\begin{center}
+			\includegraphics[scale=0.7]{images/fig2-6c}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Gráficos de $v(t)$ e $a(t)$}
+		\begin{center}
+			\includegraphics[scale=0.6]{images/fig2-6bc}
+		\end{center}
+	\end{frame}
+		
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
