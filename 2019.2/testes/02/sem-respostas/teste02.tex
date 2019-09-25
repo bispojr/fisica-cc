@@ -1,0 +1,94 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{jpurple}\bfseries,
+  stringstyle=\color{red},
+  commentstyle=\color{verde},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{cyan!10}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  tabsize=4,
+  escapeinside=||
+}
+
+\author{\\Universidade Federal de Goiás (UFG) - Regional Jataí\\Bacharelado em Ciência da Computação \\Física para Ciência da Computação \\Esdras Lins Bispo Jr.}
+
+\title{\sc \huge Segundo Teste}
+
+\date{18 de setembro de 2019}
+
+\begin{document}
+
+\maketitle
+
+{\bf ORIENTAÇÕES PARA A RESOLUÇÃO}
+
+\footnotesize
+
+\begin{itemize}
+	\item A avaliação é individual, sem consulta;
+	\item A pontuação máxima desta avaliação é 10,0 (dez) pontos, sendo uma das 06 (seis) componentes que formarão a média final da disciplina: quatro mini-testes (MT), uma prova final (PF) e eventuais exercícios-bônus propostos (EB);
+	\item A média final ($MF$) será calculada assim como se segue
+	\begin{eqnarray}
+	MF & = & MIN(10, S) \nonumber \\
+	S & = & [(\sum_{i=1}^{4} max(MT_i, SMT_i ) + PF].0,2  + EB \nonumber
+	\end{eqnarray}
+	em que 
+	\begin{itemize}
+		\item $S$ é o somatório da pontuação de todas as avaliações, e
+		\item $SMT_i$ é a substitutiva do mini-teste $i$.
+	\end{itemize}
+	\item O conteúdo exigido compreende os seguintes pontos apresentados no Plano de Ensino da disciplina: (2) Movimentos, e (6) Tecnologias Básicas.
+\end{itemize}
+
+
+\begin{center}
+	\fbox{\large Nome: \hspace{10cm}}
+	\fbox{\large Assinatura: \hspace{9cm}}
+\end{center}
+
+\newpage
+
+\normalsize
+
+\begin{enumerate}
+
+\item (5,0 pt) {\bf (Halliday 2.15 Adaptada)} Se a posição de uma partícula é dada por $x = 56 -15t  + t^2$ (onde $t$ está em segundos e $x$ em metros):
+\begin{enumerate}
+	\item Qual é a velocidade da partícula em $t = 1$s? 
+	\item O movimento nesse instante é no sentido positivo ou negativo de $x$? 
+	\item Qual é a velocidade escalar da partícula nesse instante?
+	\item A velocidade escalar está aumentando	ou diminuindo nesse instante?
+	\item Existe algum instante no 	qual a velocidade se anula? Caso a resposta seja afirmativa, para que valor de $t$ isso acontece? 
+	\item Existe algum instante após  $t  = 8$s	no qual a partícula está se movendo no sentido negativo de $x$?  Caso a resposta seja afirmativa, para que valor de $t$ isso acontece?
+\end{enumerate}
+
+
+\item Em JavaScript, crie uma função {\tt velocidadeEscalarMedia} que receba quatro parâmetros: (i) {\tt x1} (posição inicial), (ii) {\tt x2} (posição final), (iii) {\tt t1} (instante inicial), e (iv) {\tt t2} (instante final). A função deve retornar um número (a velocidade escalar média). É necessário validar a entrada para garantir que  {\tt t2 - t1} seja positivo e não nulo. Se a entrada não for válida, a função deve imprimir, via {\tt console.log}, uma mensagem de erro.
+	
+	\end{enumerate}
+\end{document}
